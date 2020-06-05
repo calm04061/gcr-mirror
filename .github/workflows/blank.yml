@@ -27,7 +27,7 @@ jobs:
       run: docker login docker.pkg.github.com -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
 
     - name: docker login Aliyun
-      run: docker login docker.registry.cn-hangzhou.aliyuncs.com -u ${{ secrets.ALIYUN_USERNAME }} -p ${{ secrets.ALIYUN_TOKEN }}
+      run: docker login registry.cn-hangzhou.aliyuncs.com -u ${{ secrets.ALIYUN_USERNAME }} -p ${{ secrets.ALIYUN_TOKEN }}
     # Runs a set of commands using the runners shell
     - name: mirror
       run: ./mirror.sh
