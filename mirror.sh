@@ -10,6 +10,7 @@ do
 				do
 					echo $site/$namespace/$image:$version
 					docker pull $site/$namespace/$image:$version
+              				docker tag $site/$namespace/$image:$version docker.pkg.github.com/calm04061/image-mirror/$site/$namespace/$image:$version
 				done
 
 
