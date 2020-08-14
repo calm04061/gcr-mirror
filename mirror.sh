@@ -11,10 +11,10 @@ do
 					echo $site/$namespace/$image:$version
 					docker pull $site/$namespace/$image:$version
               				docker tag $site/$namespace/$image:$version docker.pkg.github.com/calm04061/image-mirror/$namespace-$image:$version
-              				docker push docker.pkg.github.com/calm04061/image-mirror/$namespace-$image:$version
+              				docker push docker.pkg.github.com/calm04061/image-mirror/$namespace/$image:$version
               				
-					docker tag $site/$namespace/$image:$version registry.cn-hangzhou.aliyuncs.com/$namespace/$image:$version
-              				docker push registry.cn-hangzhou.aliyuncs.com/$namespace/$image:$version
+					#docker tag $site/$namespace/$image:$version registry.cn-hangzhou.aliyuncs.com/$namespace/$image:$version
+              				#docker push registry.cn-hangzhou.aliyuncs.com/$namespace/$image:$version
 				done
 
 
